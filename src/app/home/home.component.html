@@ -1,0 +1,17 @@
+<h2>Ecom</h2>
+<div class="web">
+    <div class="header">
+        <app-header [isOpen]="sidebarOpen" (toggle)="toggleSidebar()"></app-header>
+    </div>
+    <div class="main-container">
+        <div class="sidebar">
+            <app-side-nav [isOpen]="sidebarOpen" (toggle)="toggleSidebar()"></app-side-nav>
+
+        </div>
+
+        <div class="main">
+            <app-main></app-main>
+        </div>
+
+    </div>
+</div>

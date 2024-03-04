@@ -1,0 +1,44 @@
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: -200px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.fa{
+    font-size: 20px;
+}
+
+  .sidebar a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+   
+  .sidebar a.active {
+    background-color: white;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: blue;
+    color: white;
+    max-width: max-content;
+  
+  }
+  
+
+ 
+   
+
+
+
+  

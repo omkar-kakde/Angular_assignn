@@ -1,0 +1,30 @@
+<div class="row tablelist">
+  <h2>My Shopping Bag</h2>
+
+  <table class="table table-bordered bg-info">
+    <thead>
+      <tr>
+        <th scope="col">Product Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price Details</th>
+        <th scope="col">Total Amount Of Order</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shop of shoppingList">
+        <td>{{shop.productName}}</td>
+        <td>{{shop.quantity}}</td>
+        <td>{{shop.productPrice}}</td>
+        <td>{{shop.total}}</td>
+        <td>
+          <h4 class="text-danger" (click)="removeEntireProduct(shop.productName, shop.total)">X</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">Total</td>
+        <td>{{totalShoppingPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

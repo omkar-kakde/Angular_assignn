@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="card mr-5 ml-5 mt-5" style="width: 18rem;" *ngFor="let prod of productList">
+    <img src="{{prod.productUrl}}" class="card-img-top" alt=" ">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{prod.productName}}</h5>
+      <p class="card-text">
+        ${{prod.productPrice}}
+      </p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary"
+          (click)="addProduct(prod.productName, prod.productPrice)">+</button>
+        <button type="button" class="btn btn-secondary">Product Number</button>
+        <button type="button" class="btn btn-secondary"
+          (click)="removeProdunct(prod.productName, prod.productPrice)">-</button>
+      </div>
+      <a href="#" class="btn btn-primary mt-3"> Add To Bag</a>
+
+    </div>
+  </div>
+</div>
+
+<app-product-table [shoppingList]="shoppingList" [totalShoppingPrice]="totalShoppingPrice"></app-product-table>
